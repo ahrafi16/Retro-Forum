@@ -53,98 +53,155 @@
 
     <main class="container mx-auto my-3 px-8">
         <!-- banner -->
-        <div class="relative">
-            <div class="relative">
-                <img class="w-full" src="images/Rectangle 1.png" alt="">
-            </div>
-            <div class="flex justify-center lg:gap-12 items-center absolute inset-0 p-2 flex-1">
-                <div class="lg:space-y-8">
-                    <h1 class="lg:text-6xl font-black text-white">Welcome to the <br> <span
-                            class="text-indigo-700">ReTro</span> Forum
-                    </h1>
-                    <p class="text-white">Share your favorite opinion and win and wp <br> forum coffee mug!</p>
-                    <div class="relative">
-                        <input type="text" placeholder="Search here anything"
-                            class="input input-bordered w-full rounded-full pr-14" />
-                        <button
-                            class="p-2 lg:px-6 lg:py-2 bg-[#797DFC] text-white rounded-3xl absolute right-1 top-1/2 transform -translate-y-1/2 z-10">
-                            Search
-                        </button>
-                    </div>
+        <div class="flex justify-center gap-2 lg:gap-16 items-center bg-[#12132D] rounded-3xl px-5 py-16">
+            <div class="space-y-2 lg:space-y-6">
+                <h1 class="text-xl lg:text-6xl font-black text-white">Welcome to the <br> <span
+                        class="text-indigo-700">ReTro</span> Forum
+                </h1>
+                <p class="text-white">Share your favorite opinion and win and wp <br> forum coffee mug!</p>
+                <div class="lg:relative space-y-2 lg:space-y-0">
+                    <input type="text" placeholder="Search here anything"
+                        class="input input-bordered w-full rounded-full pr-14" />
+                    <button
+                        class="btn bg-[#797DFC] text-white rounded-full lg:absolute lg:right-0 lg:top-1/2 lg:transform lg:-translate-y-1/2 z-10">
+                        Search
+                    </button>
                 </div>
-                <div
-                    class="flex justify-between lg:gap-4 items-center font-medium text-gray-500 bg-white p-2 lg:px-8 lg:py-6 rounded-3xl">
-                    <div class="lg:space-y-5">
-                        <p>Registered Users</p>
-                        <p>Forum</p>
-                        <p>Topics</p>
-                        <p>Replies</p>
-                    </div>
-                    <div class="lg:space-y-5">
-                        <p>01</p>
-                        <p>05</p>
-                        <p>01</p>
-                        <p>01</p>
-                    </div>
+            </div>
+            <div
+                class="flex justify-between items-center font-medium text-gray-500 bg-white  rounded-3xl px-2 lg:px-8 py-2 lg:py-4">
+                <div class="space-y-4">
+                    <p>Registered Users</p>
+                    <p>Forum</p>
+                    <p>Topics</p>
+                    <p>Replies</p>
+                </div>
+                <div class="space-y-4">
+                    <p>01</p>
+                    <p>05</p>
+                    <p>01</p>
+                    <p>01</p>
                 </div>
             </div>
         </div>
 
         <!-- Lets discuss -->
-        <div>
+        <div class="space-y-2 my-20 text-center">
             <h1 class="font-black text-3xl">Let’s Discuss</h1>
-            <p>Yes, you can run unit tests and view the results directly within the app. The integrated testing features
+            <p>Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing
+                features
                 allow for a streamlined .</p>
         </div>
 
         <!-- cards -->
-        <div class="flex">
-            <div>
+        <div class="flex flex-col lg:flex-row gap-3 my-3">
+            <div class="">
                 <!-- single card -->
-                <div class="flex bg-[#797DFC1A] border-2 border-[#797DFC] rounded-2xl p-4">
+                <div
+                    class="flex bg-[#F3F3F5] hover:bg-[#797DFC1A] border-2 hover:border-[#797DFC] rounded-2xl p-4 gap-2">
                     <div>
-                        <div class="bg-red-400 w-16 h-16 rounded-2xl relative">
+                        <div class="bg-white w-16 h-16 rounded-2xl relative">
                             <div class="bg-[#10B981] w-2 h-2 rounded-full p-1 absolute right-0 -top-1">
                             </div>
-                            <img class="rounded-2xl overflow-hidden" src="images/person.jfif" alt="">
+                            <!-- <img class="rounded-2xl" src="images/person.jfif" alt=""> -->
                         </div>
                     </div>
-                    <div>
-                        <div>
-                            <div class="flex justify-between gap-2 text-sm">
-                                <p># <span>Music</span></p>
-                                <p>Author : <span>Awlad Hossain</span></p>
-                            </div>
-                            <div class="border-b-2 border-dashed">
-                                <p class="font-bold text-lg">10 Kids Unaware of Their Halloween Costume</p>
-                                <p>It’s one thing to subject yourself to ha Halloween costume mishap because, hey that’s
-                                    your prerogative</p>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <div class="flex items-center gap-2">
-                                    <i class="fa-regular fa-message"></i> <span class="mr-2">560</span>
-                                    <i class="fa-regular fa-eye"></i> <span class="mr-2">1568</span>
-                                    <i class="fa-regular fa-clock"></i> <span>5 min</span>
-                                </div>
-                                <div class="w-7 h-7 rounded-full bg-[#10B981] text-white text-center">
-                                    <i class="fa-regular fa-envelope-open text-lg"></i>
-                                </div>
-                            </div>
+                    <div class="space-y-4">
+                        <div class="flex gap-3 text-sm">
+                            <p># <span>Music</span></p>
+                            <p>Author : <span>Awlad Hossain</span></p>
                         </div>
-                        <div>
-
+                        <div class="border-b-2 border-dashed space-y-2 pb-4">
+                            <p class="font-bold text-lg">10 Kids Unaware of Their Halloween Costume</p>
+                            <p>It’s one thing to subject yourself to ha Halloween costume mishap because, hey that’s
+                                your prerogative</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-regular fa-message"></i> <span class="mr-2">560</span>
+                                <i class="fa-regular fa-eye"></i> <span class="mr-2">1568</span>
+                                <i class="fa-regular fa-clock"></i> <span>5 min</span>
+                            </div>
+                            <div class="w-7 h-7 rounded-full bg-[#10B981] text-white text-center">
+                                <i class="fa-regular fa-envelope-open text-lg"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div>
+            <div class="bg-[#12132D0D] rounded-3xl flex flex-col p-4 space-y-3 flex-1">
+                <div class="flex justify-between gap-3">
+                    <p class="font-bold">Title</p>
+                    <p><i class="fa-solid fa-check-double text-[#3DCE09]"></i> Mark as read (<span>4</span>)</p>
+                </div>
+                <div class="bg-white flex justify-between gap-3 items-center p-2 rounded-2xl">
+                    <p>10 Kids Unaware of Their <br> Halloween Costume</p>
+                    <p><i class="fa-regular fa-eye"></i> 1,568</p>
+                </div>
+            </div>
+        </div>
 
+        <!-- join our forum -->
+        <div class="flex items-center p-2 pt-4 justify-center gap-4 bg-[#12132D] rounded-3xl my-20">
+            <div class="space-y-2 lg:space-y-5 text-white">
+                <h2 class="font-black text-3xl">Join Our Forum</h2>
+                <p>Share your favorite opinion and win and wp forum coffee mug! Yes, you can <br> run unit tests and
+                    view the results directly within the app. </p>
+                <button class="btn bg-[#797DFC] rounded-full text-white border-none">Registered Now</button>
+            </div>
+            <div>
+                <img src="images/joinforum.png" alt="">
+            </div>
+        </div>
+
+        <!-- latest post -->
+        <div class="space-y-2 my-20 text-center">
+            <h1 class="font-black text-3xl">Latest Posts</h1>
+            <p>
+                Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing
+                features allow for a streamlined .
+            </p>
+        </div>
+
+        <!-- latest posts card -->
+        <div class="flex flex-col lg:flex-row my-20">
+            <!-- single card -->
+            <div class="card bg-base-100 border">
+                <figure class="px-10 pt-10">
+                    <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes"
+                        class="rounded-xl" />
+                </figure>
+                <div class="px-12 py-6 items-center text-left space-y-3">
+                    <p><i class="fa-regular fa-calendar"></i> 29 January 2024</p>
+                    <h2 class="card-title font-extrabold">What will a mars habitat force that impact in our daily
+                        life!!!</h2>
+                    <p>Yes, you can run unit tests and view the results directly within the app. </p>
+                    <div class="flex items-center gap-3">
+                        <div>
+                            <img src="images/Ellipse 1.png" alt="">
+                        </div>
+                        <div>
+                            <p>Cameron Williamson</p>
+                            <p>Unknown</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
 
-    <footer>
-
+    <footer class="bg-slate-100 p-12 space-y-4">
+        <div class="text-center border-b-2 space-y-4 pb-4">
+            <p class="font-black text-3xl">ReTro</p>
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a <br> piece of classical Latin literature from 45 BC</p>
+            <div class="flex gap-3 justify-center">
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-github"></i>
+            </div>
+        </div>
+        <p class="text-center">2017, All Rights Reserved.</p>
     </footer>
 
     <!-- Scripts -->
