@@ -91,7 +91,9 @@ const displayNewPost = posts => {
 
 // adding mark as read
 const mark_as_read = document.getElementById('markAsRead');
+let countMark = 0;
 function handleMark(title, viewcount) {
+    countMark++;
     const markAsReadCard = document.createElement('div');
     markAsReadCard.classList = `bg-white flex justify-between gap-3 items-center p-2 rounded-2xl`
     markAsReadCard.innerHTML = `
@@ -99,6 +101,25 @@ function handleMark(title, viewcount) {
         <p><i class="fa-regular fa-eye"></i> ${viewcount}</p>
     `;
     mark_as_read.appendChild(markAsReadCard);
+    const countMarkAsRead = document.getElementById('count_mark_as_read');
+    countMarkAsRead.innerText = countMark;
 }
+
+
+// handle search implementation
+const handleSearch = () => {
+    const searchField = document.getElementById('search-field');
+    const searchText = searchField.value;
+    loadPostByQuery(searchText);
+}
+
+// load post by query
+const loadPostByQuery = async (searchText) =>{
+    const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchText}`);
+    const data = await res.json();
+    const posts = data.posts;
+    displayPosts(posts);
+}
+
 
 
