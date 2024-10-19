@@ -38,7 +38,7 @@ const displayPosts = posts => {
                                     <i class="fa-regular fa-eye"></i> <span class="mr-2">${post.view_count}</span>
                                     <i class="fa-regular fa-clock"></i> <span>${post.posted_time} min</span>
                                 </div>
-                                <div class="w-7 h-7 rounded-full bg-[#10B981] text-white text-center">
+                                <div onclick = "handleMark('${post.title}',${post.view_count})" class="w-7 h-7 rounded-full bg-[#10B981] text-white text-center">
                                     <i class="fa-regular fa-envelope-open text-lg"></i>
                                 </div>
                             </div>
@@ -87,3 +87,18 @@ const displayNewPost = posts => {
         newPostContainer.appendChild(newPostCard);
     })
 }
+
+
+// adding mark as read
+const mark_as_read = document.getElementById('markAsRead');
+function handleMark(title, viewcount) {
+    const markAsReadCard = document.createElement('div');
+    markAsReadCard.classList = `bg-white flex justify-between gap-3 items-center p-2 rounded-2xl`
+    markAsReadCard.innerHTML = `
+        <p>${title}</p>
+        <p><i class="fa-regular fa-eye"></i> ${viewcount}</p>
+    `;
+    mark_as_read.appendChild(markAsReadCard);
+}
+
+
