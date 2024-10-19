@@ -14,7 +14,7 @@ const displayPosts = posts => {
     posts.forEach(post => {
         // adding the data inside the card
         const latestPostCard = document.createElement('div');
-        latestPostCard.classList = (`flex bg-[#F3F3F5] hover:bg-[#797DFC1A] border-2 hover:border-[#797DFC] rounded-2xl p-4 gap-3`);
+        latestPostCard.classList = (`flex bg-[#F3F3F5] hover:bg-[#797DFC1A] border-2 hover:border-[#797DFC] rounded-2xl p-4 gap-3 justify-between`);
         latestPostCard.innerHTML = `
                         <div>
                             <div class="bg-white w-16 h-16 rounded-2xl relative">
@@ -46,7 +46,7 @@ const displayPosts = posts => {
         `;
         latestPostCardContainer.appendChild(latestPostCard);
     });
-
+    handleLoadingSpinner(false);
 }
 
 
@@ -108,18 +108,39 @@ function handleMark(title, viewcount) {
 
 // handle search implementation
 const handleSearch = () => {
+    handleLoadingSpinner(true);
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
-    loadPostByQuery(searchText);
+    if (searchText) {
+        loadPostByQuery(searchText);
+    } else {
+        loadPost();
+    }
 }
 
 // load post by query
-const loadPostByQuery = async (searchText) =>{
+const loadPostByQuery = async (searchText) => {
     const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchText}`);
     const data = await res.json();
     const posts = data.posts;
-    displayPosts(posts);
+    latestPostCardContainer.innerHTML = '';
+    if (posts && posts.length > 0) {
+        displayPosts(posts);
+    } else {
+        handleLoadingSpinner(false);
+        latestPostCardContainer.innerHTML = '<p>No posts found for this category.</p>';
+    }
 }
 
+// handle loading spinner 
+const handleLoadingSpinner = (isLoading) => {
+    const loadingSpinner = document.getElementById('loading-spinner');
+    if(isLoading){
+        loadingSpinner.classList.remove('hidden');
+    }
+    else{
+        loadingSpinner.classList.add('hidden');
+    }
+}
 
 
